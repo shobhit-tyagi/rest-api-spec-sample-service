@@ -1,0 +1,29 @@
+spring:
+    application:
+        name: rest-api-service
+    jmx:
+        enabled: false
+    mvc:
+        favicon:
+        enabled: false
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/companies
+
+server:
+    port: 8080
+    use-forward-headers: true
+    compression:
+        enabled: true
+        mime-types: application/json,application/xml,text/html,text/xml,text/plain
+        min-response-size: 860
+    error:
+        include-stacktrace: always
+
+http:
+    client:
+        max-connect-route: 2
+        max-connect: 8
+        connect-request-timeout: 5000
+        connect-timeout: 5000
+        socket-timeout: 15000
